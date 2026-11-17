@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-pixel: 'Silkscreen', monospace;
+    --font-body: 'Chakra Petch', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-body);
+    background-color: #EEF2E6;
+    color: #1B232E;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background-image:
+      linear-gradient(to right, rgba(27, 35, 46, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(27, 35, 46, 0.03) 1px, transparent 1px);
+    background-size: 16px 16px;
+  }
+}
+
+.font-pixel {
+  font-family: var(--font-pixel);
+}
+
+.font-mono-tabular {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Crisp GBA Pixel Frame & Button Surfaces */
+.pixel-box {
+  border: 3px solid #1B232E;
+  box-shadow:
+    inset -3px -3px 0px 0px #CBD5C0,
+    inset 3px 3px 0px 0px #FFFFFF,
+    4px 4px 0px 0px #1B232E;
+}
+
+.pixel-box-crimson {
+  border: 3px solid #1B232E;
+  box-shadow:
+    inset -3px -3px 0px 0px #991B1B,
+    inset 3px 3px 0px 0px #F87171,
+    4px 4px 0px 0px #1B232E;
+}
+
+.pixel-screen {
+  border: 3px solid #1B232E;
+  background-color: #F7FAF1;
+  box-shadow:
+    inset 3px 3px 0px 0px #D4DEC8,
+    inset -2px -2px 0px 0px #FFFFFF;
+}
+
+.pixel-btn {
+  border: 2px solid #1B232E;
+  box-shadow:
+    inset -2px -2px 0px 0px rgba(0, 0, 0, 0.2),
+    inset 2px 2px 0px 0px rgba(255, 255, 255, 0.45),
+    2px 2px 0px 0px #1B232E;
+  transition: transform 80ms ease, box-shadow 80ms ease;
+}
+
+.pixel-btn:hover:not(:disabled) {
+  transform: translate(-1px, -1px);
+  box-shadow:
+    inset -2px -2px 0px 0px rgba(0, 0, 0, 0.2),
+    inset 2px 2px 0px 0px rgba(255, 255, 255, 0.55),
+    3px 3px 0px 0px #1B232E;
+}
+
+.pixel-btn:active:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow:
+    inset 2px 2px 0px 0px rgba(0, 0, 0, 0.2),
+    0px 0px 0px 0px #1B232E;
+}
+
+.pixel-input {
+  border: 2px solid #1B232E;
+  background-color: #FFFFFF;
+  box-shadow: inset 2px 2px 0px 0px #DCE3D3;
+}
+
+.pixel-input:focus {
+  outline: none;
+  border-color: #DC2626;
+  box-shadow: inset 2px 2px 0px 0px #FECACA;
+}
+
+/* Subtle LCD scanline texture for the HP display */
+.lcd-scanlines {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(27, 35, 46, 0.03) 0px,
+    rgba(27, 35, 46, 0.03) 1px,
+    transparent 1px,
+    transparent 4px
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pixel-btn,
+  .hp-fill-bar {
+    transition: none !important;
+  }
+}

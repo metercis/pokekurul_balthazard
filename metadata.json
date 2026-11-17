@@ -1,0 +1,8 @@
+{
+  "name": "PokéKurul — Balthazard Hesaplayıcı",
+  "description": "Erişkinler İçin Engellilik Değerlendirmesi Hakkında Yönetmelik (Mevzuat No: 31275) uyumlu GBA Pokémon Merkezi temalı Balthazard hesaplayıcı ve Ek-2 Alan Kılavuzu.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
